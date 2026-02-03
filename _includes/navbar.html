@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg bg-black position-fixed p-2" style="top:0px; width:100vw;z-index: 1000; width: 100vw;" data-bs-theme="dark">
+  <div class="container d-flex justify-content-center">
+
+    <div class="flex-grow-1">
+      <a class="navbar-brand fw-semibold" href="/">
+        Andrew Martinez
+      </a>
+    </div>
+
+    <!-- Right-side sidebar trigger -->
+    <button class="btn btn-outline-light ms-auto border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#sidebarRight"
+            aria-controls="sidebarRight">
+      ☰
+    </button>
+
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-end bg-dark text-light"
+     tabindex="-1"
+     id="sidebarRight"
+     data-bs-scroll="false"
+     data-bs-backdrop="true">
+
+
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">
+      {{ site.data.nav.brand }}
+    </h5>
+    <button type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <ul class="nav flex-column gap-2">
+
+      {% for item in site.data.nav.items %}
+      <li class="nav-item">
+        <a class="nav-link text-light {% if page.url == item.url %}fw-bold{% endif %}"
+           href="{{ item.url }}">
+          {{ item.title }}
+        </a>
+      </li>
+      {% endfor %}
+
+      {% for dd in site.data.nav.dropdowns %}
+      <li class="nav-item mt-3">
+        <div class="text-uppercase small opacity-75">
+          {{ dd.title }}
+        </div>
+        <ul class="nav flex-column ms-2 mt-1">
+          {% for sub in dd.items %}
+            {% unless sub.divider %}
+            <li>
+              <a class="nav-link text-light small"
+                 href="{{ sub.url }}">
+                {{ sub.title }}
+              </a>
+            </li>
+            {% endunless %}
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+
+    </ul>
+  </div>
+</div>

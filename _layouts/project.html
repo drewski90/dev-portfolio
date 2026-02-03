@@ -1,0 +1,97 @@
+---
+layout: base
+---
+
+{% assign p = site.data.projects | where: "id", page.project_id | first %}
+
+
+{% include project_header.html %}
+
+<div class="container">
+
+  <section class="mb-5">
+    <div class="card h-100">
+      <div class="card-body">
+        <h2 class="mb-3">What Is {{ p.name }}?</h2>
+        <div class="row">
+          <div class="col-12 col-md-4 mb-4">
+            <img src="{{ p.overview.image }}" style="width:100%;" />
+          </div>
+          <div class="col-12 col-md-8 mb-4">
+            {% for para in p.overview.intro %}
+              <p class="text-secondary">{{ para }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TARGET USERS -->
+  <section class="mb-5">
+    <h3 class="fw-semibold mb-4">Who This Is For</h3>
+    <div class="row g-4">
+      {% for u in p.users %}
+      <div class="col-md-4">
+        <div class="card h-100 p-4">
+          <h5>{{ u.title }}</h5>
+          <p class="text-secondary">{{ u.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- CORE WORKFLOWS -->
+  <section class="mb-5">
+    <h3 class="fw-semibold mb-4">Core Workflows</h3>
+    <div class="row g-4">
+      {% for w in p.workflows %}
+      <div class="col-md-6">
+        <div class="card h-100 p-4">
+          <h5>{{ w.title }}</h5>
+          <ul class="text-secondary mb-0">
+            {% for i in w.items %}
+            <li>{{ i }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- SYSTEM CAPABILITIES -->
+  <section class="mb-5">
+    <h3 class="fw-semibold mb-4 text-center">Platform Capabilities</h3>
+    <div class="row g-4">
+      {% for c in p.capabilities %}
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6>{{ c.title }}</h6>
+            <p class="text-secondary mb-0">{{ c.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% if p.future.paragraphs %}
+  <!-- FUTURE -->
+  <section class="mb-5">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="fw-semibold mb-3">{{ p.future.title }}</h3>
+        {% for para in p.future.paragraphs %}
+          <p class="text-secondary col-lg-9">{{ para }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {{content}}
+
+</div>

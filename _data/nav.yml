@@ -1,0 +1,26 @@
+brand: Andrew Martinez
+
+items:
+  - title: Home
+    url: /
+  - title: Projects
+    url: /#projects
+  - title: About
+    url: /about
+
+dropdowns:
+  - id: aircraftops
+    title: Aircraft-Ops
+    items:
+      - title: Purpose
+        url: /projects/aircraftops/
+      - title: Architecture
+        url: /projects/aircraftops/architecture
+
+  - id: agt
+    title: A Goddess’s Touch
+    items:
+      - title: Purpose
+        url: /projects/agt/
+      - title: Architecture
+        url: /projects/agt/architecture

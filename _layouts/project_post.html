@@ -1,0 +1,13 @@
+---
+layout: base
+---
+
+{% assign p = site.data.projects | where: "id", page.project_id | first %}
+
+{% include project_header.html %}
+
+<div class="container">
+
+  {{content}}
+
+</div>

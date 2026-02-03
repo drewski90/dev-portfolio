@@ -1,0 +1,148 @@
+- id: aircraftops
+  name: Aircraft-Ops
+  url: /projects/aircraftops
+  domain: Aviation SaaS
+  summary: Multi-tenant platform for managing aircraft data, imagery, and compliance workflows.
+  tagline: Unified operational tooling for aviation organizations.
+  image: /assets/img/01KE62MJQKFBA5NPQQAMM2SY0A.webp
+  card_image: /assets/img/01KDJ4D4C3M4JJT969R862KXTA.webp
+
+  overview:
+    intro:
+      - "Aircraft-Ops is a multi-tenant aviation data platform for aggregating,
+        normalizing, and serving structured aircraft information across
+        registrations, images, operational metadata, and compliance logs."
+      - "It functions as a central system of record for aviation teams who need
+        reliable, searchable aircraft data without maintaining fragmented
+        internal tooling or manual workflows."
+    image: /assets/img/Screenshot 2026-02-01 at 10-09-42 N778MA.webp
+
+  users:
+    - title: FBO Operations
+      description: "Track aircraft, registrations, and images across tenants with consistent identifiers and real-time search."
+    - title: Maintenance Teams
+      description: "Centralize aircraft metadata and future document ingestion for maintenance manuals, logs, and SOPs."
+    - title: Compliance & Safety
+      description: "Query immutable audit logs for operational actions, uploads, and system changes."
+
+  workflows:
+    - title: Aircraft Search
+      items:
+        - "Search by tail number, manufacturer, or ICAO type"
+        - "View normalized registry records"
+        - "Cross-linked image gallery"
+
+    - title: Image Ingestion
+      items:
+        - "Presigned uploads"
+        - "Automatic validation and moderation"
+        - "ML-based cropping and classification"
+
+    - title: Operational Logging
+      items:
+        - "Every action emits structured audit events"
+        - "Filter by user, org, or event type"
+        - "Time-bucketed analytics"
+
+    - title: Multi-Tenant Access
+      items:
+        - "Subdomain-based org routing"
+        - "Role-based permissions"
+        - "Isolated datasets per tenant"
+
+  capabilities:
+    - title: Normalized Data Models
+      description: "All entities share deterministic schemas and identifiers across registries, images, and logs."
+    - title: Search & Indexing
+      description: "Full-text search, faceting, and autocomplete across all aircraft records."
+    - title: Event Pipelines
+      description: "All ingestion, processing, and indexing runs asynchronously through background workers."
+    - title: Audit & Observability
+      description: "Immutable audit trail for all system actions with queryable historical logs."
+    - title: Scalable by Design
+      description: "Serverless architecture with no fixed capacity limits or blocking services."
+
+  future:
+    title: "Planned: Organizational Knowledge Layer"
+    paragraphs:
+      - "AircraftOps is architected to support semantic retrieval over internal
+        organizational knowledge: company memos, SOPs, manuals, schedules,
+        operational logs, and domain-specific records."
+      - "The current platform already provides the domain entity graph,
+        document vault, event model, and access-control layer.
+        The knowledge layer is a planned extension built on top of this foundation."
+
+# ----------------------------------------------------
+
+- id: agt
+  name: "A Goddess’s Touch"
+  url: /projects/agt
+  domain: Commerce / Scheduling
+  summary: End-to-end booking, payments, and staff management system for a service business.
+  tagline: Booking, payments, and operations webapp for a service business
+  image: /assets/img/home_agt_pricing_5.jpg
+  card_image: /assets/img/home_agt_pricing_5.jpg
+
+  overview:
+    intro:
+      - "A Goddess’s Touch is a full-stack commerce and operations platform
+        built to replace manual scheduling, fragmented payments,
+        and ad-hoc staff coordination."
+      - "The system centralizes bookings, online payments,
+        staff scheduling, and affiliate referrals
+        into a single real-time operational platform."
+    image: /assets/img/Screenshot 2026-02-02 at 04-50-38 A Goddesses Touch.webp
+
+  users:
+    - title: Staff / Team Members
+      description: "Manage availability, appointments, and daily schedules."
+    - title: Customers
+      description: "Book services and pay online in real time."
+    - title: Affiliates
+      description: "Share tracked referral links and generate bookings."
+
+  workflows:
+    - title: Customer Booking
+      items:
+        - "Customers browse services"
+        - "Select time slots"
+        - "Pay online via Square"
+
+    - title: Staff Scheduling
+      items:
+        - "Set availability"
+        - "Manage appointments"
+        - "View daily schedules"
+
+    - title: Business Management
+      items:
+        - "Owner manages pricing"
+        - "Tracks revenue"
+        - "Manages staff roles"
+
+    - title: Affiliate Referrals
+      items:
+        - "Generate referral links"
+        - "Track conversions"
+        - "Attribute bookings"
+
+  capabilities:
+    - title: Real-Time Booking Calendar
+      description: "Customers book appointments in real time."
+    - title: Online Payments
+      description: "Integrated Square payment processing."
+    - title: Staff Admin Dashboard
+      description: "Team members manage schedules and appointments."
+    - title: Appointment Management
+      description: "Full CRUD appointment workflows."
+    - title: Affiliate Referral System
+      description: "Tracked referral links with attribution."
+    - title: Role-Based Access
+      description: "Permissions for owners, staff, and affiliates."
+
+  role: Lead Engineer
+  status: Production
+  timeframe: "2023"
+  scale:
+    usage: "1,000+ real customer appointments"
+    revenue: "Live production payment system"
