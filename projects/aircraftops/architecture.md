@@ -41,7 +41,7 @@ project_id: aircraftops
         inset 0 0 0 1px rgba(255, 255, 255, 0.08),
         inset 0 4px 10px rgba(0, 0, 0, 0.6);">
             <img id="diagram"
-                src="/assets/img/infrastructure-composer-fboops.webp"
+                src="{{ site.baseurl }}/assets/img/infrastructure-composer-fboops.webp"
                 class="w-100"
                 style="cursor: grab;">
           </div>

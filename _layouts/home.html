@@ -42,7 +42,7 @@ title: Andrew Martinez
 
 
 <script type="module">
-  import { initHoloShader } from "/assets/js/shader.js";
+  import { initHoloShader } from "{{ site.baseurl }}/assets/js/shader.js";
 
   document.querySelectorAll(".gl-canvas").forEach(canvas => {
     initHoloShader(canvas);
@@ -50,7 +50,7 @@ title: Andrew Martinez
 </script>
 
 <script type="module">
-  import { initRotatingBadge } from "/assets/js/rotatingBadge.js";
+  import { initRotatingBadge } from "{{ site.baseurl }}/assets/js/rotatingBadge.js";
 
   initRotatingBadge({
     element: document.getElementById("rotating-badge"),
