@@ -2,7 +2,7 @@
   <div class="container d-flex justify-content-center">
 
     <div class="flex-grow-1">
-      <a class="navbar-brand fw-semibold" href="/">
+      <a class="navbar-brand fw-semibold" href="{{ site.baseurl }}/">
         Andrew Martinez
       </a>
     </div>
@@ -41,7 +41,7 @@
       {% for item in site.data.nav.items %}
       <li class="nav-item">
         <a class="nav-link text-light {% if page.url == item.url %}fw-bold{% endif %}"
-           href="{{ item.url }}">
+           href="{{ site.baseurl }}{{ item.url }}">
           {{ item.title }}
         </a>
       </li>
@@ -57,7 +57,7 @@
             {% unless sub.divider %}
             <li>
               <a class="nav-link text-light small"
-                 href="{{ sub.url }}">
+                 href="{{ site.baseurl }}{{ sub.url }}">
                 {{ sub.title }}
               </a>
             </li>

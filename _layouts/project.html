@@ -15,7 +15,7 @@ layout: base
         <h2 class="mb-3">What Is {{ p.name }}?</h2>
         <div class="row">
           <div class="col-12 col-md-4 mb-4">
-            <img src="{{ p.overview.image }}" style="width:100%;" />
+            <img src="{{ site.baseurl }}{{ p.overview.image }}" style="width:100%;" />
           </div>
           <div class="col-12 col-md-8 mb-4">
             {% for para in p.overview.intro %}
