@@ -7,7 +7,7 @@ description: >
 baseurl: "/dev-portfolio"
 url: "https://drewski90.github.io"
 
-github_username: andrewmartinez
+github_username: drewski90
 
 theme: null
 plugins:
