@@ -11,7 +11,7 @@ dropdowns:
     title: Aircraft-Ops
     items:
       - title: View Live
-        url: https://aircraft-ops.com/registry
+        url: https://aircraft-ops.com/
       - title: Purpose
         url: /projects/aircraftops/
       - title: Architecture
